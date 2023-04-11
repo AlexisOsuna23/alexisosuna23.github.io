@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloc de Notas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Bloc de Notas</h1>
+        <div class="flex-container">
+            <div class="editor-container">
+                <textarea id="editor" rows="10" cols="30" placeholder="Escribe aqui"></textarea>
+                <div class="btn-container">
+                    <button id="btnGuardar" class="btn">Guardar</button>
+                </div>
+            </div>
+            <div class="notes-container">
+                <h2 class="notes-title">Notas Guardadas</h2>
+                <ul id="notesList" class="notes-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="scriptnotas.js"></script>
+</body>
+</html>
