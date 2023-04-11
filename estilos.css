@@ -1,0 +1,160 @@
+body {
+    background-color: #F9F7F6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.editor-container {
+    margin-right: 20px;
+}
+
+h1 {
+    margin-top: 0; /* Agregamos margen superior a cero para colocar el título en la parte superior */
+}
+
+#editor {
+    width: 300px;
+    height: 200px;
+    resize: none;
+}
+
+.notes-container {
+    flex-grow: 1;
+}
+
+#notesList {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.editor-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#editor {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none;
+    outline: none;
+    background-color: #F9F7F6;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.notes-container {
+    flex: 1;
+    background-color: #F9F7F6;
+    padding: 20px;
+}
+
+.notes-title {
+    margin-top: 0;
+}
+
+.notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.note-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+}
+
+.note-item:last-child {
+    border-bottom: none;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.editor-container {
+    margin-right: 20px;
+}
+
+#editor {
+    width: 300px;
+    height: 200px;
+    resize: none;
+}
+
+.notes-container {
+    flex-grow: 1;
+}
+
+#notesList {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    margin-bottom: 10px;
+}
