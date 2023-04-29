@@ -1,46 +1,37 @@
-    // Obtener el contenido del bloc de notas desde el almacenamiento local
-    var savedContent = localStorage.getItem('notas');
+// header scrolling effect
+$(window).on('scroll', function(){
+	if($(window).scrollTop()){
+      $('header').addClass('nav-show');
+		  
+	} 
+	else{
+		$('header').removeClass('nav-show');
+	}
+	   
+})
 
-    // Mostrar las notas guardadas en el panel lateral
-    if (savedContent) {
-        var notesArray = savedContent.split('|');
-        for (var i = 0; i < notesArray.length; i++) {
-            var noteItem = document.createElement('li');
-            noteItem.className = 'note-item';
-            noteItem.textContent = notesArray[i];
-            notesList.appendChild(noteItem);
-        }
+//hamburger
+const navSlide = () => {
+	 const hamburger = document.querySelector(".hamburger");
+	 const navbar = document.querySelector(".nav-bar");
+	 const navLinks = document.querySelectorAll(".nav-bar li");
+
+     hamburger.onclick = () => {
+		
+	 navbar.classList.toggle("nav-active");
+		 
+      //Animation links
+	 navLinks.forEach((link, index) => {
+		if (link.style.animation) {
+			link.style.animation = "";
+		} else {
+			link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7+1}s`;
+		   }
+		});
+	  //hamburger animation
+	 hamburger.classList.toggle("toggle");
     }
+	 
+	}
 
-    // Función para guardar el contenido del bloc de notas
-    function guardarNota() {
-        var content = editor.value;
-        if (content !== '') {
-            var noteItem = document.createElement('li');
-            noteItem.className = 'note-item';
-            noteItem.textContent = content;
-            notesList.appendChild(noteItem);
-            editor.value = '';
-            editor.focus();
-
-            // Actualizar el contenido del almacenamiento local
-            savedContent = localStorage.getItem('notas');
-            if (savedContent) {
-                savedContent += '|' + content;
-            } else {
-                savedContent = content;
-            }
-            localStorage.setItem('notas', savedContent);
-        }
-    }
-
-    // Evento click en el botón de guardar
-    btnGuardar.addEventListener('click', guardarNota);
-
-    // Evento Enter en el textarea para guardar la nota
-    editor.addEventListener('keydown', function(event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            guardarNota();
-        }
-    });
+window.onload = () => navSlide();
